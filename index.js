@@ -2,12 +2,9 @@ import merge from 'deepmerge'
 import * as shvl from 'shvl'
 
 export default function(options, storage, key) {
-  options = options || {}
-  storage = options.storage || (window && window.localStorage)
-  key = options.key || 'vuex'
-
   if (lsTest() === true) {
     // available
+    storage = window.localStorage
   } else {
     // unavailable
     storage = window.sessionStorage
@@ -16,13 +13,17 @@ export default function(options, storage, key) {
   function lsTest() {
     var test = 'test'
     try {
-      storage.setItem(test, test)
-      storage.removeItem(test)
+      window.localStorage.setItem(test, test)
+      window.localStorage.removeItem(test)
       return true
     } catch (e) {
       return false
     }
   }
+
+  options = options || {}
+  storage = options.storage || (window && window.localStorage)
+  key = options.key || 'vuex'
 
   function canWriteStorage(storage) {
     try {
