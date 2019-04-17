@@ -2,6 +2,7 @@ import merge from 'deepmerge'
 import * as shvl from 'shvl'
 
 export default function(options, storage, key) {
+  storage = options.storage
   if (lsTest() === true) {
     // available
     storage = localStorage
@@ -22,7 +23,6 @@ export default function(options, storage, key) {
   }
 
   options = options || {}
-  storage = options.storage || (window && window.localStorage)
   key = options.key || 'vuex'
 
   function canWriteStorage(storage) {
