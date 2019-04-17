@@ -2,26 +2,6 @@ import merge from 'deepmerge'
 import * as shvl from 'shvl'
 
 export default function(options, storage, key) {
-  // storage = options.storage
-  // if (lsTest() === true) {
-  //   // available
-  //   storage = localStorage
-  // } else {
-  //   // unavailable
-  //   storage = window.sessionStorage
-  // }
-  //
-  // function lsTest() {
-  //   var test = 'test'
-  //   try {
-  //     localStorage.setItem(test, test)
-  //     localStorage.removeItem(test)
-  //     return true
-  //   } catch (e) {
-  //     return false
-  //   }
-  // }
-
   options = options || {}
   storage = options.storage
   key = options.key || 'vuex'
