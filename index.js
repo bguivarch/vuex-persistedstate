@@ -23,7 +23,7 @@ export default function(options, storage, key) {
   // }
 
   options = options || {}
-  storage = options.storage || (window && window.sessionStorage)
+  storage = options.storage
   key = options.key || 'vuex'
 
   function canWriteStorage(storage) {
