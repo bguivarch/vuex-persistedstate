@@ -4,7 +4,7 @@ import * as shvl from 'shvl'
 export default function(options, storage, key) {
   if (lsTest() === true) {
     // available
-    storage = window.localStorage
+    storage = localStorage
   } else {
     // unavailable
     storage = window.sessionStorage
@@ -13,8 +13,8 @@ export default function(options, storage, key) {
   function lsTest() {
     var test = 'test'
     try {
-      window.localStorage.setItem(test, test)
-      window.localStorage.removeItem(test)
+      localStorage.setItem(test, test)
+      localStorage.removeItem(test)
       return true
     } catch (e) {
       return false
