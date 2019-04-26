@@ -1,9 +1,9 @@
 {
-  "name": "vuex-persistedstate",
+  "name": "vizir-vuex-persistedstate",
   "description": "Persist and rehydrate your Vuex state between page reloads.",
   "version": "2.5.4",
   "license": "MIT",
-  "author": "Robin van der Vleuten <robin@webstronauts.co> (robinvdvleuten.nl)",
+  "author": "bguivarch fork of Robin van der Vleuten <robin@webstronauts.co> (robinvdvleuten.nl)",
   "keywords": [
     "vue",
     "vuex",
